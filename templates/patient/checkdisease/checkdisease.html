@@ -118,14 +118,13 @@ $("#predict").click(function () {
         $('#percentage').css('width', percent + "%");
 
         document.getElementById('diseasesearch').innerText = data["predicteddisease"];
-
         $("#href").attr("href","https://www.google.com/search?q="+ disease +"");
 
         
         document.getElementById('consultdoctor').innerText = data["consultdoctor"];
 
       }
-      
+
     });
 
   }
@@ -281,7 +280,13 @@ $("#predict").click(function () {
 
         <div class="text-center mt-4 mb-4"> 
               <button class="btn btn-outline-success">
-                    <a id="href" href="https://www.google.com/search?q=anuj" target="_blank" rel="noopener noreferrer">Click here to know more about &nbsp 
+                    <a id="href" href="https://www.google.com/search?q=oriengo" target="_blank" rel="noopener noreferrer">Click here to know more about &nbsp
+                    <span id="diseasesearch" style="color: crimson;"></span></a>
+              </button>
+        </div>
+      <div class="text-center mt-4 mb-4">
+              <button class="btn btn-outline-success">
+                    <a id="href" href="https://www.google.com/search?q=oriengo" target="_blank" rel="noopener noreferrer">Click here to find nearest hopsital treating &nbsp
                     <span id="diseasesearch" style="color: crimson;"></span></a>
               </button>
         </div>
