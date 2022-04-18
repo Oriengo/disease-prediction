@@ -1,0 +1,198 @@
+﻿{% extends "basic.html" %}
+{% load static %}
+	{% block head %}
+{% endblock %}
+{% block body %}
+<div class="jumbotron" >
+    <h3 >Be your own doctor...</h3>
+    <p class="lead">
+        The is an end user support and online consultation platform that allow users
+        to get instant guidance on their disease through an intelligent system.
+        After succesfull login or registration, there will be a window where  you will select the symptoms. It then processes user specific details to check
+        for various illness that could be associated with it.
+        The system use some intelligent data mining
+        techniques to predict the most accurate illness that could be associated with patient’s symptoms details.
+        Based on result, patient can contact doctor accordingly for further treatment or search more on the disease.
+
+     {% if user.is_authenticated %}
+
+     {% else %}
+
+      <p class="lead">
+      <button type="button" class="btn btn-primary btn-lg"  data-toggle="modal" data-target=".bd-example-modal-lg">Get started</button>
+      </p>
+    
+
+</div>
+
+
+<div class="container mt-5 mb-3" style="width:fit-content;">
+      <center>
+        <h2>Sign-in as</h2>
+        </center>
+      
+      
+      <form>
+          <div class="container mt-5 mb-5">
+       <div class="row">
+          <div class="col">
+             <a href="{% url 'sign_in_admin' %}">
+      <img  alt="admin" src="{% static 'homepage/admin.png' %}"  class="img">
+      </a>
+          </div>
+           <br>
+          <div class="col">
+      <a href="{% url 'sign_in_doctor' %}">
+      <img  alt="doctor" src="{% static 'homepage/doctor.png' %}"  class="img">
+      </a>
+          </div>
+           <br>
+          <div class="col">
+      <a href="{% url 'sign_in_patient' %}">
+      <img  alt="patient" src="{% static 'homepage/patient.png' %}"  class="img">
+      </a>
+          </div>
+        </div>
+        </div>
+      </form>
+</div>
+
+    {% endif %}
+
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+   
+<center>
+  <h2>Sign-in as</h2>
+  </center>
+<br><br>
+
+<center>
+<form>
+    <div class="container mt-5 mb-5">
+ <div class="row">
+    <div class="col">
+       <a href="{% url 'sign_in_admin' %}">
+<img  alt="admin" src="{% static 'homepage/admin.png' %}"  class="img">
+</a>
+    </div>
+
+    <div class="col">
+<a href="{% url 'sign_in_doctor' %}">
+<img  alt="doctor" src="{% static 'homepage/doctor.png' %}"  class="img">
+</a>
+    </div>
+
+    <div class="col">
+<a href="{% url 'sign_in_patient' %}">
+<img  alt="patient" src="{% static 'homepage/patient.png' %}"  class="img">
+</a>
+    </div>
+  </div>
+  </div>
+</form>
+</center>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Large modal -->
+
+<div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+   
+<center>
+  <h1>Sign-up as</h1>
+  </center>
+<br><br>
+
+<center>
+<form>
+    <div class="container mt-5 mb-5 ml-5 mr-5">
+ <div class="row">
+
+    <div class="col">
+<a href="{% url 'signup_doctor' %}">
+<img  alt="doctor" src="{% static 'homepage/doctor.png' %}"  class="img">
+</a>
+    </div>
+
+    <div class="col">
+<a href="{% url 'signup_patient' %}">
+<img  alt="patient" src="{% static 'homepage/patient.png' %}"  class="img">
+</a>
+    </div>
+  </div>
+  </div>
+</form>
+</center>
+
+    </div>
+  </div>
+</div>
+<br>
+<center><h3>Our Doctors</h3></center>
+<div class="row mt-5 mb-5">
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Dr. AGNETA ODHIAMBO </h5>
+                <img  alt="admin" src="{% static 'homepage/c31.jpg' %}" width="150" height="200" class="rounded">
+                <p class="card-text"> Nairobi Hospital, Agwings Kodhek Road, P.O BOX 180 -00100. Ngara - 135133, (Honkong).</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">Dr. WILSON OUSA </h5>
+                <img  alt="admin" src="{% static 'homepage/c41.jpg' %}" width="150" height="200" class="rounded">
+                <p class="card-text">Neurologist, Raila Road, Kisumu-148031, Oginga Odinga street, Kisumu.</p>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title">DR. MICHAEL ONYANGO</h5>
+                <img  alt="admin" src="{% static 'homepage/s72.jpg' %}" width="150" height="200" class="rounded">
+                <p class="card-text">Kenyatta Hospital, Agwings Kodhek Road, P.O BOX 200 -00100.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+<br><br><br><br>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    
+
+
+
+
+    
+{% endblock %}
