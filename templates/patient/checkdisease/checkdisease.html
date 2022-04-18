@@ -190,7 +190,7 @@ $("#predict").click(function () {
     <br>
     <div class="text-center"> 
       <h3>
-          Identify possible conditions and treatment related to your symptoms.
+          Input your symptoms and let us predict the most accurate disease your are ailig from.
       </h3><br>
             <button onclick="Functionshow()" class="btn btn-primary dropdown-toggle">Add symptoms</button>
     </div>
@@ -266,7 +266,7 @@ $("#predict").click(function () {
                             <span class="diseasefield" >Patient name: {{ user.patient.name }}</span>
                             <span class="diseasefield" >&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Age : {{ user.patient.age }} </span>
                     </div>
-                    <span class="diseasefield" >Predicted disease is: </span><span class="diseasefield" id="diseasefield" style="color: #092700; text-shadow: 2px 2px 4px rgb(36, 255, 45);"></span> <br>
+                    <span class="diseasefield" >Predicted disease is:  </span><span class="diseasefield" id="diseasefield" style="color: red;"></span> <br>
                     <br>
                     <span class="diseasefield">Confidence score of:  </span>
                     <span>
@@ -303,12 +303,10 @@ $("#predict").click(function () {
             {% csrf_token %} 
             <button id="consultbtn" type="submit" class="btn btn-primary"> Consult a <span id="consultdoctor"  name="consultdoctor" > </span> doctor</button>
           </form>
-        </div>
-      
- 
-</div>
 
-         
+            <br> <br> <br>
+        </div>
+</div>
 
 </div>
 
